@@ -1,173 +1,263 @@
-/* Reset basique */
+/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
-}
-
+/* ===== BODY + FOND ===== */
 body {
   font-family: 'Roboto', sans-serif;
+  font-size: 16px;
   line-height: 1.7;
   color: #000;
-  background-image: url('f.png'); /* j’ai enlevé le / devant */
+  background-image: url("fond d'écran 2.jpeg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-}
-
-/* Main pour pousser le contenu sous le header */
-main {
   min-height: 100vh;
-  padding-top: 200px; /* espace pour le header version ordi */
 }
 
-/* Header */
+/* ===== HEADER FIXE BLANC - LOGO XXL ===== */
 header {
-  position: fixed;
-  top: 0; 
-  left: 0;
+  background-color: #fff;
+  height: 120px; /* 110px → 120px */
   width: 100%;
-  background-color: #FFFFFF;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  height: 100%;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 15px 50px;
-  z-index: 100;
+  align-items: center;
 }
 
-header img {
-  height: 160px;
+.header-left img {
+  height: 100px !important; /* 90px → 100px + force */
+  max-height: none !important;
   width: auto;
+  display: block;
 }
 
+/* ===== MENU HORIZONTAL SANS PUCES ===== */
 nav ul {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
 }
 
 nav a {
   text-decoration: none;
   color: #000;
-  font-weight: 500;
-  font-size: 18px;
-  transition: color 0.3s;
+  font-weight: 400;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  padding: 8px 5px;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: #555;
+  color: #A3B18A;
 }
 
-/* Sections */
+/* ===== MAIN + SECTION BLANCHE CENTRÉE ===== */
+main {
+  padding-top: 150px; /* 140px → 150px pour compenser header plus haut */
+  padding-bottom: 120px;
+  min-height: calc(100vh - 120px);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
 section {
-  max-width: 900px;
-  margin: 0 auto 60px auto;
-  background: #FFFFFF;
-  padding: 40px 50px;
+  background-color: rgba(255, 255, 255, 0.95);
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 50px 60px;
   border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-section h1, section h2 {
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 20px;
-  color: #000;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  text-align: center;
 }
 
 section p {
-  margin-bottom: 15px;
+  text-align: justify;
+  margin-bottom: 16px;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  font-size: 14px;
-  background-color: #F8F8F8;
+/* ===== TITRES ===== */
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
   color: #000;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 5px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-/* Bouton flottant contact */
+h3.subtitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: #000;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+
+section h3:not(.subtitle) {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  color: #A3B18A;
+  font-weight: 500;
+  margin-top: 30px;
+  margin-bottom: 12px;
+  text-align: left;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+/* ===== BOUTON DOCTOLIB VERT DÉGRADÉ ===== */
+.doctolibButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0 0 0;
+  padding: 14px 30px;
+  background: linear-gradient(135deg, #A3B18A 0%, #8A9A73 100%);
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(163, 177, 138, 0.3);
+  transition: all 0.3s ease;
+}
+
+.doctolibButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(163, 177, 138, 0.4);
+  background: linear-gradient(135deg, #8A9A73 0%, #7A8A63 100%);
+}
+
+/* ===== BOUTON MAIL FIXE BAS DROITE PÊCHE ===== */
 #contactButton {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background-color: #000;
-  color: white;
+  z-index: 9999;
+  margin: 0;
+  padding: 16px 24px;
+  background-color: #FAD4C0;
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
   border: none;
-  padding: 15px 25px;
   border-radius: 50px;
-  font-size: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
   cursor: pointer;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  transition: background-color 0.3s;
-  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
 }
 
 #contactButton:hover {
-  background-color: #555;
+  background-color: #A3B18A;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.2);
 }
 
-/* Responsive Mobile */
-@media(max-width: 768px){
-  
-  /* Header passe en colonne + plus petit */
+/* ===== FOOTER FORCÉ EN BAS ===== */
+footer {
+  text-align: center;
+  padding: 80px 0 30px 0;
+  font-size: 0.9rem;
+  color: #333;
+  margin-top: 0;
+}
+
+/* ===== RESPONSIVE MOBILE ===== */
+@media (max-width: 768px) {
   header {
+    height: auto;
+    padding: 15px 0;
+  }
+  
+  .header-container {
     flex-direction: column;
-    gap: 10px;
-    padding: 12px 15px;
+    gap: 15px;
+    padding: 0 20px;
   }
   
-  header img {
-    height: 70px; /* logo divisé par 2 */
+  .header-left img {
+    height: 85px !important; /* mobile aussi plus grand */
+    max-height: none !important;
   }
   
-  /* Menu en colonne centré */
   nav ul {
-    flex-direction: column;
-    gap: 8px;
-    text-align: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   
   nav a {
-    font-size: 16px;
-    padding: 5px 0;
-    display: block;
+    font-size: 1rem;
   }
   
-  /* Main : moins de padding top car header plus petit */
   main {
-    padding-top: 160px;
+    padding-top: 210px;
+    padding-bottom: 100px;
+    min-height: calc(100vh - 180px);
+    padding-left: 20px;
+    padding-right: 20px;
   }
   
-  /* Sections adaptées mobile */
   section {
-    margin: 0 15px 40px 15px;
-    padding: 25px 20px;
-    border-radius: 8px;
+    padding: 30px 25px;
   }
   
-  section h1, section h2 {
-    font-size: 1.5rem;
+  h2 {
+    font-size: 1.1rem;
   }
   
-  /* Bouton contact plus petit + accessible */
+  h3.subtitle {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+  }
+  
   #contactButton {
-    bottom: 15px;
-    right: 15px;
-    padding: 12px 20px;
-    font-size: 14px;
+    bottom: 20px;
+    right: 50%;
+    transform: translateX(50%);
+    font-size: 0.9rem;
+    padding: 14px 20px;
   }
   
-  /* Footer */
+  #contactButton:hover {
+    transform: translateX(50%) translateY(-3px);
+  }
+  
   footer {
-    font-size: 13px;
-    padding: 15px;
+    padding: 60px 0 25px 0;
   }
 }
