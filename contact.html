@@ -1,44 +1,74 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact - Sarah Amaro</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Sarah Amaro Psychologue Clinicienne</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header>
+    <div class="header-container">
+      <div class="header-left">
+        <img src="logo.png" alt="Sarah Amaro Psychologue Clinicienne">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="pourquoi.html">Pourquoi consulter</a></li>
+          <li><a href="formation.html">Formation</a></li>
+          <li><a href="tarifs.html">Tarifs</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<header>
-  <img src="logo.png" alt="Logo Sarah Amaro">
-  <nav>
-    <ul>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="pourquoi.html">Pourquoi consulter</a></li>
-      <li><a href="formation.html">Formation</a></li>
-      <li><a href="tarifs.html">Tarifs</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <main>
+    <section>
+      <h2>CONTACT</h2>
+      
+      <p>Vous pouvez me contacter pour prendre rendez-vous ou pour toute question.</p>
+      
+      <h3>Adresse du cabinet</h3>
+      <p>73 Rue Courloison<br>
+      77160 Provins</p>
+      
+      <h3>Téléphone</h3>
+      <p>06.23.19.79.68</p>
+      
+      <h3>Prise de rendez-vous en ligne</h3>
+      <a href="https://www.doctolib.fr/psychologue/provins/sarah-amaro?pid=practice-724041&phs=true&page=1&index=2" 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         class="doctolibButton">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        Réserver sur Doctolib
+      </a>
+    </section>
+  </main>
 
-<section>
-  <h2>Contact</h2>
-  <p>Vous pouvez me contacter pour prendre rendez-vous ou pour toute question.</p>
-  <p>Cabinet : 73 Rue Courloison, 77160 Provins</p>
-  <p>Tél : 06.23.19.79.68 </p>
-	
-	<a href="https://www.doctolib.fr/psychologue/provins/sarah-amaro" target="_blank">Prendre rendez-vous sur Doctolib</a>
-</section>
+  <!-- BOUTON MAIL FIXE BAS DROITE -->
+  <button id="contactButton" onclick="window.location.href='mailto:amaro-psychologue@outlook.com'">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+      <polyline points="22,6 12,13 2,6"></polyline>
+    </svg>
+    Envoyer un message
+  </button>
 
-<button id="contactButton" onclick="window.location.href='mailto:amaro-psychologue@outlook.com'">
-Envoyer un message
-</button>
-
-<footer>
-  <div class="copyright">Sarah Amaro &copy; 2025 - <strong>Tous droits réservés</strong></div>
-</footer>
-
-
+  <footer>
+    Sarah Amaro © 2025 - <strong>Tous droits réservés</strong>
+  </footer>
 </body>
 </html>
