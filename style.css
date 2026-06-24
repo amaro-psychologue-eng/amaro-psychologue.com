@@ -13,7 +13,7 @@ body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.7;
   color: #000;
-  background-image: url('fond fleur bleu.png'); /* j’ai enlevé le / devant */
+  background-image: url('f.png'); /* j’ai enlevé le / devant */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
