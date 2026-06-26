@@ -33,7 +33,7 @@
   <!-- MAIN -->
   <main>
     <section>
-      <h2>TARIFS</h2>
+      <h2 class="subtitle">TARIFS</h2>
       
       <h3>Première séance de suivi psychologique - 60 €</h3>
       <p>La première consultation est un premier pas : c’est l’occasion de se rencontrer, d’expliquer vos difficultés et vos besoins, et de me permettre d’avoir une image claire de votre situation, le tout dans un cadre bienveillant.</p>
@@ -55,15 +55,34 @@
       <a href="https://www.doctolib.fr/psychologue/provins/sarah-amaro?pid=practice-724041&phs=true&page=1&index=2" 
          target="_blank" 
          rel="noopener noreferrer" 
-         id="contactButton">
+         class="doctolibButton"> <!-- CORRECTION : class et pas id -->
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
         Prendre rendez-vous
       </a>
     </section>
   </main>
 
+  <!-- BOUTON MAIL FIXE BAS DROITE -->
+  <button id="contactButton" onclick="window.location.href='mailto:amaro-psychologue@outlook.fr'">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+      <polyline points="22,6 12,13 2,6"></polyline>
+    </svg>
+    Envoyer un message
+  </button>
+
   <!-- FOOTER -->
-  <footer>
-    Sarah Amaro © 2025 - <strong>Tous droits réservés</strong>
-  </footer>
+<footer>
+  <p>
+     Amaro Sarah © 2025 - Tous droits réservés
+    <a href="mentions-legales.html">Mentions légales</a> |
+    <a href="confidentialite.html">Politique de confidentialité</a>
+  </p>
+</footer>
 </body>
 </html>
