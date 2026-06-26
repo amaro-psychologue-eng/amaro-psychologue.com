@@ -33,25 +33,47 @@
   <!-- MAIN -->
   <main>
     <section>
-   <h2>POURQUOI CONSULTER ?</h2>
+      <h2 class="subtitle">POURQUOI CONSULTER ?</h2>
       
-  <p>Prendre rendez-vous chez un psychologue n’est pas toujours simple, mais venir consulter constitue déjà une étape importante. C’est souvent une démarche intime, parfois chargée d’émotions ou de doutes. Pourtant, franchir ce pas, c’est déjà prendre soin de soi ou de son enfant.</p> 
-<p>J’accompagne les enfants, les adolescents et les adultes à différents moments de leur parcours de vie. Les motifs de consultation sont variés et propres à chacun. Il peut s’agir de périodes marquées par de l’anxiété, du stress ou des troubles du sommeil, d’un sentiment de perte de sens, d’un état de tristesse profonde ou d’un épuisement. Certaines personnes consultent en lien avec des difficultés relationnelles ou familiales, un manque de confiance en soi ou une estime de soi fragilisée. D’autres traversent un deuil, une rupture ou une étape de vie difficile, ou ressentent simplement le besoin d’un espace pour mieux se comprendre et prendre du recul.</p> <br>
-<p>Quel que soit l’âge, chaque histoire mérite d’être entendue et accueillie avec attention.</p>
-	<p>Faire cette démarche demande du courage et témoigne d’une volonté de prendre soin de soi...</p>
+      <p>Prendre rendez-vous chez un psychologue n’est pas toujours simple, mais venir consulter constitue déjà une étape importante. C’est souvent une démarche intime, parfois chargée d’émotions ou de doutes. Pourtant, franchir ce pas, c’est déjà prendre soin de soi ou de son enfant.</p> 
+      
+      <p>J’accompagne les enfants, les adolescents et les adultes à différents moments de leur parcours de vie. Les motifs de consultation sont variés et propres à chacun. Il peut s’agir de périodes marquées par de l’anxiété, du stress ou des troubles du sommeil, d’un sentiment de perte de sens, d’un état de tristesse profonde ou d’un épuisement. Certaines personnes consultent en lien avec des difficultés relationnelles ou familiales, un manque de confiance en soi ou une estime de soi fragilisée. D’autres traversent un deuil, une rupture ou une étape de vie difficile, ou ressentent simplement le besoin d’un espace pour mieux se comprendre et prendre du recul.</p>
+      
+      <p>Quel que soit l’âge, chaque histoire mérite d’être entendue et accueillie avec attention.</p>
+      
+      <p>Faire cette démarche demande du courage et témoigne d’une volonté de prendre soin de soi...</p>
       
       <a href="https://www.doctolib.fr/psychologue/provins/sarah-amaro?pid=practice-724041&phs=true&page=1&index=2" 
          target="_blank" 
          rel="noopener noreferrer" 
-         id="contactButton">
-         Prendre rendez-vous
+         class="doctolibButton"> <!-- CORRECTION ICI : class et pas id -->
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        Prendre rendez-vous
       </a>
     </section>
   </main>
 
+  <!-- BOUTON MAIL FIXE BAS DROITE -->
+  <button id="contactButton" onclick="window.location.href='mailto:amaro-psychologue@outlook.fr'">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+      <polyline points="22,6 12,13 2,6"></polyline>
+    </svg>
+    Envoyer un message
+  </button>
+
   <!-- FOOTER -->
-  <footer>
-    Sarah Amaro © 2025 - <strong>Tous droits réservés</strong>
-  </footer>
+<footer>
+  <p>
+     Amaro Sarah © 2025 - Tous droits réservés
+    <a href="mentions-legales.html">Mentions légales</a> |
+    <a href="confidentialite.html">Politique de confidentialité</a>
+  </p>
+</footer>
 </body>
 </html>
